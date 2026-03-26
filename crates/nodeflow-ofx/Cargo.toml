@@ -1,0 +1,19 @@
+[package]
+name    = "nodeflow-ofx"
+version = "0.1.0"
+edition = "2021"
+description = "OpenFX (OFX) host and plugin-loader wrapper in safe Rust"
+
+[dependencies]
+nodeflow-buffer = { path = "../nodeflow-buffer" }
+nodeflow-core   = { path = "../nodeflow-core" }
+
+libc        = { workspace = true }
+libloading  = { workspace = true }
+thiserror   = { workspace = true }
+anyhow      = { workspace = true }
+tracing     = { workspace = true }
+serde       = { workspace = true }
+
+[build-dependencies]
+# Nothing needed yet; bindgen would go here when we auto-gen ofxCore.h bindings

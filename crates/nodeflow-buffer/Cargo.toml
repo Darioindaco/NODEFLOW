@@ -1,0 +1,11 @@
+[package]
+name    = "nodeflow-buffer"
+version = "0.1.0"
+edition = "2021"
+description = "High-performance SIMD pixel buffer for 4K float32 compositing"
+
+[dependencies]
+bytemuck  = { workspace = true }
+thiserror = { workspace = true }
+rayon     = { workspace = true }
+serde     = { workspace = true }

@@ -1,0 +1,29 @@
+[workspace]
+members = [
+    "crates/nodeflow-core",
+    "crates/nodeflow-buffer",
+    "crates/nodeflow-ofx",
+    "nodeflow-app",
+]
+resolver = "2"
+
+[workspace.dependencies]
+# Async + parallel
+tokio        = { version = "1", features = ["full"] }
+rayon        = "1.10"
+# Graph
+petgraph     = "0.6"
+# SIMD-friendly data
+bytemuck     = { version = "1", features = ["derive"] }
+# Error handling
+thiserror    = "1"
+anyhow       = "1"
+# Logging
+tracing      = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+# Serialization (node graphs can be saved/loaded)
+serde        = { version = "1", features = ["derive"] }
+serde_json   = "1"
+# FFI helpers for OpenFX
+libc         = "0.2"
+libloading   = "0.8"

@@ -1,0 +1,16 @@
+[package]
+name    = "nodeflow-core"
+version = "0.1.0"
+edition = "2021"
+description = "DAG-based compositor engine with parallel node scheduling"
+
+[dependencies]
+nodeflow-buffer = { path = "../nodeflow-buffer" }
+
+tokio     = { workspace = true }
+rayon     = { workspace = true }
+petgraph  = { workspace = true }
+thiserror = { workspace = true }
+anyhow    = { workspace = true }
+tracing   = { workspace = true }
+serde     = { workspace = true }

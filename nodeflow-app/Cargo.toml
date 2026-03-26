@@ -1,0 +1,19 @@
+[package]
+name    = "nodeflow-app"
+version = "0.1.0"
+edition = "2021"
+description = "NodeFlow compositor – integration demo"
+
+[[bin]]
+name = "nodeflow"
+path = "src/main.rs"
+
+[dependencies]
+nodeflow-core   = { path = "../crates/nodeflow-core" }
+nodeflow-buffer = { path = "../crates/nodeflow-buffer" }
+nodeflow-ofx    = { path = "../crates/nodeflow-ofx" }
+
+tokio              = { workspace = true }
+anyhow             = { workspace = true }
+tracing            = { workspace = true }
+tracing-subscriber = { workspace = true }
