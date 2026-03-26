@@ -8,6 +8,10 @@ description = "NodeFlow compositor – integration demo"
 name = "nodeflow"
 path = "src/main.rs"
 
+[[bin]]
+name = "nodeflow-ui"
+path = "src/bin/ui.rs"
+
 [dependencies]
 nodeflow-core   = { path = "../crates/nodeflow-core" }
 nodeflow-buffer = { path = "../crates/nodeflow-buffer" }
@@ -17,3 +21,6 @@ tokio              = { workspace = true }
 anyhow             = { workspace = true }
 tracing            = { workspace = true }
 tracing-subscriber = { workspace = true }
+
+eframe = "0.29"
+egui   = "0.29"
