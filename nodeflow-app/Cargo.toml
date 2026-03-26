@@ -24,3 +24,4 @@ tracing-subscriber = { workspace = true }
 
 eframe = "0.29"
 egui   = "0.29"
+image  = { version = "0.25", default-features = false, features = ["png", "jpeg"] }
